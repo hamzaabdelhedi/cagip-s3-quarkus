@@ -26,4 +26,13 @@ public class GreetingResource {
     public String greeting(@PathParam String name) {
         return service.greeting(name);
     }
+
+
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    @Path("/allObjects")
+    public String listAllObjects() {
+        return service.listAllObjects();
+    }
+
 }
